@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=640, user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/index.js" charset="UTF-8"></script>
+</head>
+<body>
+<div class="music" id="music">
+    <audio id="audioFir" src="Unique.mp3" preload="none" loop/>
+</div>
+<img class="slide" src="img/arr.png" alt="">
+<div id="main">
+    <ul id="list">
+        <li>
+            <div class="a0">
+                <img class="round" src="img/p1_round.png" alt="">
+                <img class="round1" src="img/p1_round1.png" alt="">
+                <img class="me" src="img/P50413-100735.gif" alt="">
+                <p class="p1 animated bounceInLeft"></p>
+                <p class="job animated rubberBand">Web Developer</p>
+                <p class="chance">Bring Your Dreams To Life</p>
+                <div class="know">
+                    <img src="img/p1_block.png" alt="">
+                    <p class="knowP1">  Read  more  </p>
+                    <img class="knowImg1 " src="img/p1_tri.png" alt="">
+                    <img class="knowImg2" src="img/p1_tri.png" alt="">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="a1">
+                <img class="p2_ball" src="img/p2_ball.png" alt="">
+                <img class="p2_ball2" src="img/p2_ball.png" alt="">
+                <p class="content animated flip">Directory</p>
+                <img class="p2_one" src="img/p2_one.png" alt="">
+                <p class="p2_oneP">个 人 信 息</p>
+                <img class="p2_two" src="img/p2_two.png" alt="">
+                <p class="p2_twoP">专 业 技 能</p>
+                <img class="p2_three" src="img/p2_three.png" alt="">
+                <p class="p2_threeP">联 系 方 式</p>
+            </div>
+        </li>
+        <li>
+            <div class="a3">
+                <span class="myInfo"></span>
+                <img class="p3_speak" src="img/p3_speak.png" alt="">
+                <p class="p3_obj animated bounceInRight">var obj={</p>
+                <p class="p3_name animated bounceInRight">name: "王鹏",</p>
+                <p class="p3_edu animated bounceInRight">education: "本科",</p>
+                <p class="p3_exp animated bounceInRight">experince: "2年",</p>
+                <p class="p3_add animated bounceInRight">address: "北京"</p>
+                <p class="p3_obj2 animated bounceInRight">}</p>
+                <img class="p3_ball" src="img/6gewcw.gif">
+            </div>
+        </li>
+        <li class="a4">
+            <img class="p4_face" src="img/zhuan003.png" alt="">
+            <img class="p4_border animated swing" src="img/jineng64.png" alt="">
+            <p class="p4_circle"></p>
+            <p class="p4_bg1 animated bounceInUp">JS</p>
+            <p class="p4_bg2 animated bounceInRight"></p>
+            <p class="p4_bg3 animated bounceInDown"></p>
+            <p class="p4_bg4 animated bounceInLeft "></p>
+            <img class="p4_right animated rubberBand" src="img/p4_right.png">
+        </li>
+        <li class="a6">
+            <img class="p6_heart" src="img/end683.png" alt="">
+            <p class="word animated bounceInLeft">I'm waiting for you</p>
+            <img class="p6_phone animated bounceInLeft" src="img/p6_phone.png" alt="">
+            <p class="p6_phone1 animated bounceInRight">15620633520</p>
+            <img class="p6_qq animated bounceInLeft" src="img/p6_qq.png" alt="">
+            <p class="p6_qq1 animated bounceInRight">1083367673</p>
+            <img class="p6_mail animated bounceInLeft" src="img/p6_mail.png" alt="">
+            <p class="p6_mail1 animated bounceInRight">wangpeng022@sina.cn</p>
+            <img src="img/myInfo.png" alt="" class="erwei animated rubberBand">
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    ~function () {
+        var music = document.getElementById("music"), audioFir = document.getElementById("audioFir");
+        window.setTimeout(function () {
+            audioFir.play();
+            audioFir.addEventListener("canplay", function () {
+                music.style.display = "block";
+                music.className = "music musicMove";
+            }, false);
+        }, 500);
+        music.addEventListener("click", function () {
+            if (audioFir.paused) {
+                audioFir.play();
+                music.className = "music musicMove";
+                return;
+            }
+            audioFir.pause();
+            music.className = "music";
+        }, false);
+    }();
+</script>
+</body>
+</html>
